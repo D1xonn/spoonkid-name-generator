@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoonkid Name Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function generateName() {
+            const adjectives = ["Stealthy", "Lone", "Savage", "Crafty", "Mighty", "Silent"];
+            const nouns = ["Raider", "Bandit", "Survivor", "Nomad", "Marauder", "Outlaw"];
+            const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+            const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
+            const name = `${randomAdjective} ${randomNoun}`;
+            document.getElementById("nameOutput").textContent = name;
+        }
+    </script>
+</head>
+<body>
+    <h1>Spoonkid Rust Name Generator</h1>
+    <p>Click the button to generate a random Rust-inspired name!</p>
+    <div id="nameOutput">Your Rust Name</div>
+    <button onclick="generateName()">Generate Name</button>
+</body>
+</html>
