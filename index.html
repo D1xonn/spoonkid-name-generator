@@ -7,13 +7,31 @@
     <link rel="stylesheet" href="style.css">
     <script>
         function generateName() {
-            const adjectives = ["Stealthy", "Lone", "Savage", "Crafty", "Mighty", "Silent"];
-            const nouns = ["Raider", "Bandit", "Survivor", "Nomad", "Marauder", "Outlaw"];
+            const adjectives = [
+                "Fearless", "Daring", "Legendary", "Mysterious", "Dark", "Galactic", "Ancient", "Clever",
+                "Brave", "Silent", "Lone", "Savage", "Epic", "Swift", "Mighty", "Noble", "Reckless", "Bold", 
+                "Grim", "Fiery", "Stormy", "Icy", "Blazing", "Shadowy", "Vengeful", "Merciless", "Fierce", 
+                "Cunning", "Wild", "Valiant", "Ruthless", "Stealthy"
+            ];
+
+            const nouns = [
+                "Warrior", "Hunter", "Nomad", "Outlaw", "Mercenary", "Bandit", "Champion", "Guardian", "Raider",
+                "Avenger", "Ranger", "Marauder", "Sorcerer", "Shadow", "Knight", "Samurai", "Phoenix", "Rebel",
+                "Vanguard", "Wanderer", "Sage", "Commander", "Titan", "Beast", "Assassin", "Invoker", "Predator",
+                "Hero", "Villain", "Rogue", "Enigma", "Mystic"
+            ];
+
+            // Generate random indices for adjective and noun
             const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
             const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
+
+            // Combine them into a unique name
             const name = `${randomAdjective} ${randomNoun}`;
             document.getElementById("nameOutput").textContent = name;
         }
+
+        // Automatically generate a name when the page loads
+        window.onload = generateName;
     </script>
 </head>
 <body>
